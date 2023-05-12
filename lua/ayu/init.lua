@@ -276,6 +276,10 @@ local function set_groups()
     VM_Cursor = { bg = colors.selection_inactive, sp = colors.fg, underline = true },
     VM_Insert = { sp = colors.fg, underline = true },
     VM_Mono = { fg = colors.bg, bg = colors.comment },
+
+    -- barbar
+    BufferCurrent = { bg = colors.gutter_normal },
+    BufferCurrentMod = { fg = colors.accent, bg = colors.gutter_normal },
   }
 
   groups = vim.tbl_extend('force', groups, type(config.overrides) == 'function' and config.overrides() or config.overrides)
